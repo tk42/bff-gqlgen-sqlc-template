@@ -1,0 +1,394 @@
+_type: export
+__export_format: 4
+__export_date: 2022-11-28T01:22:33.708Z
+__export_source: insomnia.desktop.app:v2022.6.0
+resources:
+  - _id: req_9bf82b77cafb4d39b5a73f2ac94ad70b
+    parentId: fld_a53fb12b5f1740b38d6a225e29752f49
+    modified: 1669597959607
+    created: 1669555898039
+    url: http://localhost:8080/query
+    name: GetAgents
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query {\n\tagents {\n\t\tname\n\t\temail\n\t}\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555898039
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_a53fb12b5f1740b38d6a225e29752f49
+    parentId: wrk_e0f5ca526ae644bfbc830a525102859e
+    modified: 1669597740585
+    created: 1669597740585
+    name: Agent
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669597740585
+    _type: request_group
+  - _id: wrk_e0f5ca526ae644bfbc830a525102859e
+    parentId: null
+    modified: 1669555895027
+    created: 1669555895027
+    name: bff-gqlgen-sqlc-template
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_e3a3e101da3941c38c693ab5ba7b8c11
+    parentId: fld_a53fb12b5f1740b38d6a225e29752f49
+    modified: 1669597744716
+    created: 1669588455463
+    url: http://localhost:8080/query
+    name: AddAgent
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n\tcreateAgent(data: {\n\t\tname: \"hoge\",
+        \n\t\temail: \"hoge@gmail.com\"\n\t})
+        {\n\t\tname\n\t\temail\n\t}\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555897989
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1ef442e0d94c4b2cb68fd9d6c5c54797
+    parentId: fld_a53fb12b5f1740b38d6a225e29752f49
+    modified: 1669597745762
+    created: 1669597518604
+    url: http://localhost:8080/query
+    name: UpdateAgent
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n\tupdateAgent(id: \"1\", data: {\n\t\tname:
+        \"hoge\"\n\t\temail: \"foobar@gmail.com\"\n\t})
+        {\n\t\tname\n\t\temail\n\t}\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555897939
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_abb8d83d22e14a82ab31429ea65776ec
+    parentId: fld_a53fb12b5f1740b38d6a225e29752f49
+    modified: 1669597746803
+    created: 1669597638404
+    url: http://localhost:8080/query
+    name: DeleteAgent
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n\tdeleteAgent(id: \"1\")
+        {\n\t\tname\n\t\temail\n\t}\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555897889
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_05509c0b35cc4d96b25f3ce26168cab4
+    parentId: fld_d02c77f06d3f46d8b7d4a9d2feaed021
+    modified: 1669598536467
+    created: 1669597754798
+    url: http://localhost:8080/query
+    name: GetAuthors
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query {\n\tauthors {\n\t\tid\n\t\tname\n\t\twebsite\n\t\tagent
+        {\n\t\t\tid\n\t\t\tname\n\t\t\temail\n\t\t}\n\t\tbooks
+        {\n\t\t\tid\n\t\t\ttitle\n\t\t\tdescription\n\t\t}\n\t}\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555898039
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d02c77f06d3f46d8b7d4a9d2feaed021
+    parentId: wrk_e0f5ca526ae644bfbc830a525102859e
+    modified: 1669597754796
+    created: 1669597754796
+    name: Author
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669597740535
+    _type: request_group
+  - _id: req_e0e06e86be7c4b2c867bc699a045469d
+    parentId: fld_d02c77f06d3f46d8b7d4a9d2feaed021
+    modified: 1669598063517
+    created: 1669597754802
+    url: http://localhost:8080/query
+    name: AddAuthor
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n\tcreateAuthor(data: {\n\t\tagent_id:
+        \"2\",\n\t\tname: \"hoge\", \n\t\twebsite: \"http://google.com\"\n\t})
+        {\n\t\tname\n\t\twebsite\n\t}\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555897989
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1332a783d23146d294418e727bf8c25a
+    parentId: fld_d02c77f06d3f46d8b7d4a9d2feaed021
+    modified: 1669598073977
+    created: 1669597754806
+    url: http://localhost:8080/query
+    name: UpdateAuthor
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n\tupdateAuthor(id:\"5\" , data:{\n\t\tagent_id:
+        \"2\",\n\t\tname: \"hoge\", \n\t\twebsite:
+        \"https://google.co.jp\"\n\t}) {\n\t\tname\n\t\twebsite\n\t}\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555897939
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6e5e457fb3f840d3a260b441db162b3c
+    parentId: fld_d02c77f06d3f46d8b7d4a9d2feaed021
+    modified: 1669598058975
+    created: 1669597754822
+    url: http://localhost:8080/query
+    name: DeleteAuthor
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n\tdeleteAuthor(id: \"4\")
+        {\n\t\tname\n\t\twebsite\n\t}\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555897889
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c34f8d8138654e5cbccde42723dca5e4
+    parentId: fld_6c0030926ade47f9a69e81b4e261b964
+    modified: 1669598504345
+    created: 1669598082999
+    url: http://localhost:8080/query
+    name: GetBooks
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query {\n\tbooks
+        {\n\t\tid\n\t\ttitle\n\t\tdescription\n\t\tauthors
+        {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t}\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555898039
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_6c0030926ade47f9a69e81b4e261b964
+    parentId: wrk_e0f5ca526ae644bfbc830a525102859e
+    modified: 1669598082996
+    created: 1669598082996
+    name: Book
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669597740485
+    _type: request_group
+  - _id: req_248340188e5343c5b4744deb18cced91
+    parentId: fld_6c0030926ade47f9a69e81b4e261b964
+    modified: 1669598508135
+    created: 1669598083005
+    url: http://localhost:8080/query
+    name: AddBook
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n\tcreateBook(data: {\n\t\ttitle: \"Tale of
+        Genji\"\n\t\tdescription: \"Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit.\"\n\t\tcover: \"http://image.com\"\n\t\tauthorIDs:
+        [\"5\"]\n\t}) {\n\t\ttitle\n\t\tdescription\n\t\tcover\n\t\tauthors
+        {\n\t\t\tid\n\t\t\tname\n\t\t\twebsite\n\t\t}\n\t}\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555897989
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ca37b3d25f9d4e8d9725f1bb72250728
+    parentId: fld_6c0030926ade47f9a69e81b4e261b964
+    modified: 1669598474072
+    created: 1669598083009
+    url: http://localhost:8080/query
+    name: UpdateBook
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n\tupdateBook(id:\"1\" , data:{\n\t\ttitle:
+        \"源氏物語\"\n\t\tcover: \"https://image.co.jp\"\n\t\tdescription: \"Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.\"\n\t\tauthorIDs: [\"5\"]\n\t})
+        {\n\t\tid\n\t\ttitle\n\t\tdescription\n\t}\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555897939
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_62a071371ca14e0a9c2678cb94d0e908
+    parentId: fld_6c0030926ade47f9a69e81b4e261b964
+    modified: 1669598499797
+    created: 1669598083014
+    url: http://localhost:8080/query
+    name: DeleteBook
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n\tdeleteBook(id: \"1\")
+        {\n\t\tid\n\t\ttitle\n\t\tauthors {\n\t\t\tname\n\t\t}\n\t}\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1669555897889
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_e630eeeff2c4175a49a97dcf931472db59ccb102
+    parentId: wrk_e0f5ca526ae644bfbc830a525102859e
+    modified: 1669555895034
+    created: 1669555895034
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1669555895034
+    _type: environment
+  - _id: jar_e630eeeff2c4175a49a97dcf931472db59ccb102
+    parentId: wrk_e0f5ca526ae644bfbc830a525102859e
+    modified: 1669555895040
+    created: 1669555895040
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_e98f3eee2d2648839bdae938fe6098eb
+    parentId: wrk_e0f5ca526ae644bfbc830a525102859e
+    modified: 1669555895028
+    created: 1669555895028
+    fileName: bff-gqlgen-sqlc-template
+    contents: ""
+    contentType: yaml
+    _type: api_spec
