@@ -9,7 +9,7 @@ BFF(Backend For Frontend) with GraphQL generated its DB schema (postgres) by sql
  1. Create a new project in hygraph / strapi
  1. Edit the schema
  1. Fill `ACCESS_TOKEN`, `ENDPOINT` in `.env.local`
- 1. `docker compose run export` creates `schema.graphql`
+ 1. `docker compose up export` creates `schema.graphql`
  1. Write `schema.sql` and `queries.sql`
  1. Edit generate code for each model in `dataloaders/generate.go`
  1. Generate files in `/gen` by `docker compose -f docker-compose.autogen up`
