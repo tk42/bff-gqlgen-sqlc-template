@@ -1,18 +1,11 @@
 version: '3'
 services:
-  dataloaders:
-    image: golang:latest
-    volumes:
-      - ".:/home"
-    working_dir: "/home"
-    command: ["go", "generate", "./dataloaders/generate.go"]
-
   gqlgen:
     image: golang:latest
     volumes:
       - ".:/home"
     working_dir: "/home"
-    command: ["go", "run", "github.com/99designs/gqlgen"]
+    command: ./entrypoint.sh
 
   sqlc:
     image: kjconroy/sqlc:latest

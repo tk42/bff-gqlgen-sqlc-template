@@ -7,7 +7,7 @@ resources:
     parentId: fld_a53fb12b5f1740b38d6a225e29752f49
     modified: 1669597959607
     created: 1669555898039
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: GetAgents
     description: ""
     method: POST
@@ -50,7 +50,7 @@ resources:
     parentId: fld_a53fb12b5f1740b38d6a225e29752f49
     modified: 1669597744716
     created: 1669588455463
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: AddAgent
     description: ""
     method: POST
@@ -77,7 +77,7 @@ resources:
     parentId: fld_a53fb12b5f1740b38d6a225e29752f49
     modified: 1669597745762
     created: 1669597518604
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: UpdateAgent
     description: ""
     method: POST
@@ -104,7 +104,7 @@ resources:
     parentId: fld_a53fb12b5f1740b38d6a225e29752f49
     modified: 1669597746803
     created: 1669597638404
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: DeleteAgent
     description: ""
     method: POST
@@ -130,13 +130,14 @@ resources:
     parentId: fld_d02c77f06d3f46d8b7d4a9d2feaed021
     modified: 1669598536467
     created: 1669597754798
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: GetAuthors
     description: ""
     method: POST
     body:
       mimeType: application/graphql
-      text: '{"query":"query {\n\tauthors {\n\t\tid\n\t\tname\n\t\twebsite\n\t\tagent
+      text:
+        '{"query":"query {\n\tauthors {\n\t\tid\n\t\tname\n\t\twebsite\n\t\tagent
         {\n\t\t\tid\n\t\t\tname\n\t\t\temail\n\t\t}\n\t\tbooks
         {\n\t\t\tid\n\t\t\ttitle\n\t\t\tdescription\n\t\t}\n\t}\n}"}'
     parameters: []
@@ -167,7 +168,7 @@ resources:
     parentId: fld_d02c77f06d3f46d8b7d4a9d2feaed021
     modified: 1669598063517
     created: 1669597754802
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: AddAuthor
     description: ""
     method: POST
@@ -194,13 +195,14 @@ resources:
     parentId: fld_d02c77f06d3f46d8b7d4a9d2feaed021
     modified: 1669598073977
     created: 1669597754806
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: UpdateAuthor
     description: ""
     method: POST
     body:
       mimeType: application/graphql
-      text: '{"query":"mutation {\n\tupdateAuthor(id:\"5\" , data:{\n\t\tagent_id:
+      text:
+        '{"query":"mutation {\n\tupdateAuthor(id:\"5\" , data:{\n\t\tagent_id:
         \"2\",\n\t\tname: \"hoge\", \n\t\twebsite:
         \"https://google.co.jp\"\n\t}) {\n\t\tname\n\t\twebsite\n\t}\n}\n"}'
     parameters: []
@@ -221,7 +223,7 @@ resources:
     parentId: fld_d02c77f06d3f46d8b7d4a9d2feaed021
     modified: 1669598058975
     created: 1669597754822
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: DeleteAuthor
     description: ""
     method: POST
@@ -247,7 +249,7 @@ resources:
     parentId: fld_6c0030926ade47f9a69e81b4e261b964
     modified: 1669598504345
     created: 1669598082999
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: GetBooks
     description: ""
     method: POST
@@ -284,7 +286,7 @@ resources:
     parentId: fld_6c0030926ade47f9a69e81b4e261b964
     modified: 1669598508135
     created: 1669598083005
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: AddBook
     description: ""
     method: POST
@@ -313,7 +315,7 @@ resources:
     parentId: fld_6c0030926ade47f9a69e81b4e261b964
     modified: 1669598474072
     created: 1669598083009
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: UpdateBook
     description: ""
     method: POST
@@ -344,7 +346,7 @@ resources:
     parentId: fld_6c0030926ade47f9a69e81b4e261b964
     modified: 1669598499797
     created: 1669598083014
-    url: http://localhost:8080/query
+    url: http://localhost:8080/graphql
     name: DeleteBook
     description: ""
     method: POST

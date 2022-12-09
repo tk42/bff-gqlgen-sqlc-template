@@ -36,10 +36,10 @@ func main() {
 
 	// configure the server
 	mux := http.NewServeMux()
-	mux.Handle("/", NewPlaygroundHandler("/query"))
-	dlMiddleware := Middleware(repo)                 // <- here we initialize the middleware
-	queryHandler := NewHandler(repo, dl)             // <- use dataloader.Retriever here
-	mux.Handle("/query", dlMiddleware(queryHandler)) // <- use dataloader.Middleware here
+	mux.Handle("/", NewPlaygroundHandler("/graphql"))
+	dlMiddleware := Middleware(repo)                   // <- here we initialize the middleware
+	queryHandler := NewHandler(repo, dl)               // <- use dataloader.Retriever here
+	mux.Handle("/graphql", dlMiddleware(queryHandler)) // <- use dataloader.Middleware here
 
 	// run the server
 	port := ":8080"

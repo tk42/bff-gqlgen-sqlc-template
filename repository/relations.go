@@ -59,6 +59,8 @@ func (r *repoSvc) withTx(ctx context.Context, txFn func(*sqlc.Queries) error) er
 	return err
 }
 
+// Fill entities with Relation schema
+// i.e. LEFT JOIN queries
 func (r *repoSvc) CreateBook(ctx context.Context, bookArg sqlc.CreateBookParams, authorIDs []int64) (*sqlc.Book, error) {
 	book := new(sqlc.Book)
 	err := r.withTx(ctx, func(q *sqlc.Queries) error {
